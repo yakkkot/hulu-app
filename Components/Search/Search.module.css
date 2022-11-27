@@ -1,0 +1,14 @@
+
+.container{
+    /*position: absolute;*/
+    /*top: 15px;*/
+    /*left: 38%;*/
+}
+
+.input {
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: 300px;
+    color: black;
+    background-color: #eae9f3;
+}

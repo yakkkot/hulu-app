@@ -1,0 +1,57 @@
+.container{
+    padding: 10px 20px;
+    /*position: sticky;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 100;*/
+    /*background-color: #030027;*/
+    display: grid;
+    grid-template-columns: [start] auto [middle1] 1fr [middle2] auto [end];
+    grid-template-areas: "icons search logo";
+}
+
+.icons{
+    display: flex;
+    grid-area: icons;
+    gap: 15px;
+}
+.search{
+    grid-area: search;
+}
+
+.logo{
+    grid-area: logo;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "icons logo"
+                "search search";
+
+    }
+    .logo{
+        justify-self: end;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "icons"
+                "logo"
+                "search";
+        align-items: center;
+        justify-items: center;
+    }
+    .logo{
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+}
