@@ -8,7 +8,7 @@ const moviesServices = {
     getTrendingMovie: (page:number = 1) => axiosServices.get(urls.trending,{params: {page}}),
     getTopRatedMovie: (page:number = 1) => axiosServices.get(urls.top_rated,{params: {page}}),
     getSimilarMovie: (id:number) => axiosServices.get(`${urls.movie}/${id}/similar`),
-    getSearchMovie: (query:string, page:number=1) => axiosServices.get(urls.search, {params: {query, page}}),
+    getSearchMovie: (query:string, page:number=1) => axiosServices.get<IPageMovies>(urls.search, {params: {query, page}}),
     getMoviesWithGenre: (id:number, page:number = 1) => axiosServices.get<IPageMovies>(urls.movies + `?with_genres=${id}`, {params: {page}}),
     getCredits: (id:number) => axiosServices.get(`${urls.movie}/${id}/credits`),
     getTrailerVideo: (id:number) => axiosServices.get(`${urls.movie}/${id}/videos`)
