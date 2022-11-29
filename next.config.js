@@ -15,7 +15,6 @@ const nextConfig = {
   images: {
     domains: [
       'image.tmdb.org',
-      // 'img.freepik.com/premium-vector/'
       'img.freepik.com',
       'previews.123rf.com'
     ],

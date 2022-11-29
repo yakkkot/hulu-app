@@ -1,8 +1,5 @@
 import {MdKeyboardArrowUp} from "react-icons/md";
 
-
-
-
 export const Up = (): JSX.Element => {
 
     const scrollToTop = () => {
